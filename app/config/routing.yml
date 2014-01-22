@@ -1,3 +1,7 @@
+mis_recetas_recetas:
+    resource: "@MisRecetasRecetasBundle/Resources/config/routing.yml"
+    prefix:   /
+
 my_recipes:
     resource: "@MyRecipesBundle/Resources/config/routing.yml"
     prefix:   /

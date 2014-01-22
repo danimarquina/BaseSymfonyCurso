@@ -1,0 +1,41 @@
+My\RecipesBundle\Entity\Recipe:
+    type: entity
+    table: null
+    manyToOne:
+        author:
+            targetEntity: Author
+            joinColumn:
+                name: author_id
+                referenceColumnName: id
+            cascade:
+                ["persist"]
+    manyToMany:
+        ingredients:
+            targetEntity: Ingredient
+            joinTable:
+                name: recipe_ingredients
+                joinColumns:
+                    recipe_id:
+                        referenceColumnName: id
+                inverseJoinColumns:
+                    ingredient_id:
+                        referenceColumnName: id
+            cascade:
+                ["persist"]
+    repositoryClass: My\RecipesBundle\Entity\RecipeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        difficulty:
+            type: string
+            length: 255
+        description:
+            type: text
+    lifecycleCallbacks: {  }

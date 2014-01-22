@@ -1,0 +1,7 @@
+parameters:
+#    mis_recetas_recetas.example.class: MisRecetas\RecetasBundle\Example
+
+services:
+#    mis_recetas_recetas.example:
+#        class: %mis_recetas_recetas.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
